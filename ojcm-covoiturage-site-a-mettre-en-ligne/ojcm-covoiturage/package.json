@@ -1,0 +1,14 @@
+{
+  "name": "ojcm-covoiturage",
+  "version": "1.0.0",
+  "description": "Site de covoiturage du club de judo OJCM (Sigean / Narbonne) avec espace administrateur",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

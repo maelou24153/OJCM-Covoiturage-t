@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OJCM Covoiturage</title>
+<meta name="description" content="Covoiturage du club de judo OJCM (Sigean / Narbonne) : proposez ou réservez une place pour les compétitions, stages et entraînements.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Paytone+One&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="club">Olympique Judo Club Méditerranée · Sigean · Narbonne</p>
+      <h1>Covoiturage <em>OJCM</em></h1>
+      <p class="lead">Un tatami à rejoindre ? Proposez vos places ou réservez-en une pour les compétitions, stages et entraînements du club.</p>
+      <div class="cta">
+        <a class="btn sun" href="#rendez-vous">Voir les trajets</a>
+        <button class="btn ghost" type="button" data-act="mine">Retrouver ma réservation</button>
+      </div>
+    </div>
+    <div class="logo-card"><img src="/logo.png" width="600" height="416" alt="Logo du club OJCM : une grande vague bleue et un judoka"></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,38 C160,78 340,0 540,30 C740,60 900,80 1100,38 C1260,8 1360,20 1440,40 L1440,70 L0,70 Z"/></svg>
+</header>
+
+<main class="wrap" id="rendez-vous">
+  <div id="announce"></div>
+  <div class="sec-head">
+    <h2 class="t">Prochains rendez-vous</h2>
+    <div class="filters" role="group" aria-label="Filtres">
+      <button class="chipbtn" type="button" data-act="fcity" data-v="all" aria-pressed="true">Tous les départs</button>
+      <button class="chipbtn" type="button" data-act="fcity" data-v="Sigean" aria-pressed="false">Sigean</button>
+      <button class="chipbtn" type="button" data-act="fcity" data-v="Narbonne" aria-pressed="false">Narbonne</button>
+      <button class="chipbtn" type="button" data-act="fcity" data-v="Autre" aria-pressed="false">Autre</button>
+      <label class="sr-only" for="f-kind">Type de rendez-vous</label>
+      <select id="f-kind">
+        <option value="all">Tous les types</option>
+        <option value="competition">Compétitions</option>
+        <option value="entrainement">Entraînements</option>
+        <option value="stage">Stages</option>
+        <option value="autre">Autres</option>
+      </select>
+    </div>
+  </div>
+  <div id="events" aria-live="polite"><p class="muted">Chargement des trajets…</p></div>
+
+  <ol class="how">
+    <li><b>Le club publie</b> les compétitions, stages et entraînements.</li>
+    <li><b>Un conducteur propose</b> un trajet depuis Sigean, Narbonne ou ailleurs.</li>
+    <li><b>Les familles réservent</b> leurs places et reçoivent le contact du conducteur.</li>
+  </ol>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>OJCM · Olympique Judo Club Méditerranée · Sigean / Narbonne</span>
+    <a href="/admin">Espace administrateur</a>
+  </div>
+</footer>
+
+<dialog class="dlg" id="dlg" aria-labelledby="dlg-title"><div class="dlg-in" id="dlg-body"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js"></script>
+</body>
+</html>
